@@ -5,34 +5,58 @@
     <title>Simulador plazo fijo</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<table>
-    <thead>
-    <tr>
-        <th>Criptomoneda</th>
-        <th>Valor en dólares</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>Bitcoin</td>
-        <td>$54,367.80</td>
-    </tr>
-    <tr>
-        <td>Ethereum</td>
-        <td>$3,746.18</td>
-    </tr>
-    <tr>
-        <td>XRP</td>
-        <td>$1.60</td>
-    </tr>
-    <tr>
-        <td>Litecoin</td>
-        <td>$372.39</td>
-    </tr>
-    </tbody>
-</table>
+    <body onload="iniciarCalculadora()">
+        
+        <div class="modal" id="ageVerificationModal">
+            <p class="message">Para acceder al contenido, por favor ingrese su fecha de nacimiento:</p>
+            <input type="date" id="fechaNacimiento" required>
+            <div class="options">
+                <button class="btn" onclick="verificarEdad()">Verificar</button>
+            </div>
+        </div>
     
+        <div id="content" style="display: none;">
+            <!-- Contenido de la página -->
+            <h1>Bienvenido al contenido</h1>
+            <p>Aquí encontrarás información interesante.</p>
+        </div>
+
+        <h1>Calculadora de Plazos Fijos</h1>
+        <form>
+            <label for="banco">Banco:</label>
+                <select id="banco" required>
+                    <option value="" disabled selected>Seleccione un banco</option>
+                    <option value="Banco de la Nacion">Banco de la Nacion</option>
+                    <option value="Banco Santander">Banco Santander</option>
+                    <option value="Banco Galicia">Banco Galicia</option>
+                    <!-- Agrega más opciones de bancos aquí -->
+                </select><br><br>
+
+    
+            <label for="monto">Monto del Plazo Fijo:</label>
+            <input type="number" id="monto" placeholder="Ingrese el monto" required><br><br>
+    
+            <label for="plazo">Plazo en días:</label>
+            <select id="plazo">
+                <option value="30">30 días</option>
+                <option value="60">60 días</option>
+                <option value="90">90 días</option>
+                <option value="180">180 días</option>
+                <option value="365">365 días</option>
+            </select><br><br>
+    
+            <button type="button" onclick="calcularPlazoFijo()">Calcular</button>
+        </form>
+    
+        <h2>Resultados del Plazo Fijo:</h2>
+            <div id="resultados">
+                <p>Resultados del plazo fijo en [nombre del banco]:</p>
+                <p>Monto ingresado: $[monto]</p>
+                <p>Intereses a [plazoSeleccionado] días: $[interes]</p>
+                <p>Tasa de interés anual: [tasaAnual]%</p>
+            </div>
+
+
     <script src="javascript.js"></script>
 </body>
 </html>
