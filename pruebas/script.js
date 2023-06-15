@@ -1,13 +1,67 @@
 
+//SIMULADOR PLAZO FIJO DE TODOS LOS BANCOS
+
+/*verificar edad
+
+let edadUsuario = prompt("Ingrese su edad");
+
+edadUsuario = parseInt(edadUsuario);
+
+if (edadUsuario >= 18) {
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edad");
+    document.body.innerHTML = "";
+}
+*/
+
+
+/*function calcularPlazoFijo() {
+
+// Obtener el banco seleccionado por el usuario
+let bancoSeleccionado = prompt("Ingrese el nombre del banco:");
+
+// Buscar el banco en el array de bancos
+let banco = bancos.find(function(b) {
+    return b.banco.toLowerCase() === bancoSeleccionado.toLowerCase();
+});
+
+// Verificar si se encontró el banco
+if (!banco) {
+    console.log("Banco no encontrado. Intente nuevamente.");
+    return;
+}
+
+// Obtener el monto ingresado por el usuario
+var monto = parseFloat(prompt("Ingrese el monto del plazo fijo:"));
+
+// Verificar si el monto es válido
+if (isNaN(monto) || monto < banco.monto_minimo) {
+    console.log("Monto inválido. El monto mínimo es de " + banco.monto_minimo + ".");
+    return;
+}
 
 
 
+// Obtener el plazo seleccionado por el usuario
+let plazoSeleccionado = parseInt(prompt("Ingrese el plazo en días (30, 60, 90, 180, 365):"));
 
+// Verificar si el plazo es válido
+if (![30, 60, 90, 180, 365].includes(plazoSeleccionado)) {
+console.log("Plazo inválido. Intente nuevamente.");
+return;
+}
 
+// Calcular los intereses para el plazo seleccionado
+var interes = (banco['interes_' + plazoSeleccionado] / 100) * monto;
 
+// Mostrar el resultado
+console.log("Resultados del plazo fijo en " + banco.banco + ":");
+console.log("Monto ingresado: $" + banco.monto_minimo.toFixed(2));
+console.log("Intereses a " + plazoSeleccionado + " días: $" + interes.toFixed(2));
+}
 
-
-
+*/
 
 
 
