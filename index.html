@@ -11,17 +11,17 @@
             <p class="message">Para acceder al contenido, por favor ingrese su fecha de nacimiento:</p>
             <input type="date" id="fechaNacimiento" required>
             <div class="options">
-                <button class="btn" onclick="verificarEdad()">Verificar</button>
+                <button class="btn" id="verificarBtn">Verificar</button>
             </div>
         </div>
     
         <div id="content" style="display: none;">
             <!-- Contenido de la página -->
-            <h1>Bienvenido al contenido</h1>
-            <p>Aquí encontrarás información interesante.</p>
+            <h1>Bienvenido al Simulador de plazo fijo</h1>
+            <p>Todo lo que necesitas saber, está aquí.</p>
         </div>
 
-        <h1>Calculadora de Plazos Fijos</h1>
+        <h1>Calcular tu plazo fijo</h1>
         <form>
             <label for="banco">Banco:</label>
                 <select id="banco" required>
@@ -45,7 +45,7 @@
                 <option value="365">365 días</option>
             </select><br><br>
     
-            <button type="button" onclick="calcularPlazoFijo()">Calcular</button>
+            <button type="button" id="calcularBtn">Calcular</button>
         </form>
     
         <h2>Resultados del Plazo Fijo:</h2>

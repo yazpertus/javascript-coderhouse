@@ -1,3 +1,4 @@
+
 //SIMULADOR PLAZO FIJO DE TODOS LOS BANCOS
 
 /*verificar edad
@@ -15,14 +16,19 @@ if (edadUsuario >= 18) {
 */
 
 
+// Obtener el botón por su id
+let verificarBtn = document.getElementById("verificarBtn");
+
+// Asignar el evento al botón
+verificarBtn.addEventListener("click", verificarEdad);
 
 // Verificar la edad del usuario
 function verificarEdad() {
-    var fechaNacimiento = document.getElementById("fechaNacimiento").value;
-    var fechaActual = new Date();
+    let fechaNacimiento = document.getElementById("fechaNacimiento").value;
+    let fechaActual = new Date();
 
     // Calcular la diferencia de años
-    var edad = fechaActual.getFullYear() - new Date(fechaNacimiento).getFullYear();
+    let edad = fechaActual.getFullYear() - new Date(fechaNacimiento).getFullYear();
 
     if (edad >= 18) {
         // Mostrar el contenido de la página
@@ -121,6 +127,13 @@ console.log("Intereses a " + plazoSeleccionado + " días: $" + interes.toFixed(2
 }
 
 */
+
+// Obtener el botón por su id
+let calcularBtn = document.getElementById("calcularBtn");
+
+// Asignar el evento al botón
+calcularBtn.addEventListener("click", calcularPlazoFijo);
+
 
 
 
